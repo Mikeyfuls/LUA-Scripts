@@ -1,0 +1,12 @@
+local function Entered(player)
+	local leaderstatsFolder = Instance.new("Folder")
+	leaderstatsFolder.Name = "leaderstats"
+
+	local AccountAgeValue = Instance.new("IntValue")
+	AccountAgeValue.Name = "Age"
+	AccountAgeValue.Value = player.AccountAge
+	AccountAgeValue.Parent = leaderstatsFolder
+	leaderstatsFolder.Parent = player
+end
+
+game:GetService("Players").PlayerAdded:Connect(Entered)
