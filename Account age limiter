@@ -1,0 +1,12 @@
+local MinAge = 5
+
+local KickMsg = "Sorry you cannot join this game your account age is too low!"
+
+game.Players.PlayerAdded:Connect(function(PLR)
+	
+	if PLR.AccountAge < MinAge then 
+	
+		PLR:Kick(KickMsg)
+	end
+	
+end)
